@@ -160,7 +160,9 @@
         .action-btn { padding: 5px 10px; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; color: white; margin-left: 5px; }
         .btn-edit { background: var(--orange); } .btn-delete { background: var(--danger); }
         
-        .code-output-section { background: #0B132B; padding: 20px; border-radius: 8px; margin-top: 20px; }
+        .code-output-section {
+    display: none;
+}
         .code-output-section h3 { color: var(--primary-color); margin-top: 0; margin-bottom: 10px; font-size: 16px; }
         #generated-code-area { width: 100%; height: 300px; background: #1e1e1e; color: #a6e22e; font-family: monospace; border: none; padding: 15px; border-radius: 6px; outline: none; resize: vertical; direction: ltr; text-align: left;}
         .copy-code-btn { background: var(--primary-color); color: var(--secondary-color); border: none; padding: 12px 20px; border-radius: 6px; font-weight: 900; cursor: pointer; margin-top: 10px; width: 100%; font-size: 16px; }
@@ -278,7 +280,18 @@
         </div>
 
        
+<div class="code-output-section" style="display:none;">
+    <h3>💻 الكود المصدري بعد التحديث</h3>
+    <p style="color:#ccc; font-size:13px; margin-bottom:10px;">
+        عند إضافة أو تعديل منتج، سيتم تحديث هذا الكود تلقائياً.
+    </p>
 
+    <textarea id="generated-code-area" readonly></textarea>
+
+    <button class="copy-code-btn" onclick="copyGeneratedCode()">
+        📋 نسخ الكود كاملاً
+    </button>
+</div>
             <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed #555;">
                 <h3 style="color: #fff; margin-bottom: 10px;">🚀 الرفع المباشر إلى GitHub</h3>
                 <p style="color:#ccc; font-size:12px; margin-bottom:10px;">تم دمج التوكن الخاص بك تلقائياً. يمكنك الضغط على زر الرفع مباشرة الآن!</p>
