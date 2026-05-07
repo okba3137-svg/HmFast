@@ -273,7 +273,7 @@
         <div class="admin-table-container">
             <table class="admin-table">
                 <thead><tr><th>ID</th><th>صورة</th><th>الاسم</th><th>السعر</th><th>المخزون</th><th>إجراءات</th></tr></thead>
-                <tbody id="admin-products-tbody"></tbody>
+                <tbody id="admin-products-tbody"><tr><td>6</td><td><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016384/1777663738410_myuma2.png" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>سلس ذهب</td><td>200</td><td><b style="color:green">3</b></td><td><button class="action-btn btn-edit" onclick="editProduct(6)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(6)">حذف 🗑️</button></td></tr><tr><td>5</td><td><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778107498/Picsart_26-05-06_18-44-19-212_lbrvap.jpg" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>مباخر</td><td>300</td><td><b style="color:green">2</b></td><td><button class="action-btn btn-edit" onclick="editProduct(5)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(5)">حذف 🗑️</button></td></tr><tr><td>1</td><td><img src="https://images.unsplash.com/photo-1590845947698-8924d7409b56?w=500" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>ميزان إلكتروني صناعي دقيق</td><td>47,000</td><td><b style="color:green">15</b></td><td><button class="action-btn btn-edit" onclick="editProduct(1)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(1)">حذف 🗑️</button></td></tr><tr><td>2</td><td><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>تيشيرت قطني صيفي كاجوال</td><td>6,900</td><td><b style="color:green">2</b></td><td><button class="action-btn btn-edit" onclick="editProduct(2)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(2)">حذف 🗑️</button></td></tr><tr><td>3</td><td><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>سماعات بلوتوث عازلة للضوضاء</td><td>12,000</td><td><b style="color:green">3</b></td><td><button class="action-btn btn-edit" onclick="editProduct(3)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(3)">حذف 🗑️</button></td></tr><tr><td>4</td><td><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>حقيبة ظهر عصرية للسفر</td><td>8,000</td><td><b style="color:green">8</b></td><td><button class="action-btn btn-edit" onclick="editProduct(4)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(4)">حذف 🗑️</button></td></tr></tbody>
             </table>
         </div>
 
@@ -286,7 +286,7 @@
             <div style="margin-top: 20px; padding-top: 15px; border-top: 1px dashed #555;">
                 <h3 style="color: #fff; margin-bottom: 10px;">🚀 الرفع المباشر إلى GitHub</h3>
                 <p style="color:#ccc; font-size:12px; margin-bottom:10px;">تم دمج التوكن الخاص بك تلقائياً. يمكنك الضغط على زر الرفع مباشرة الآن!</p>
-                <input type="password" id="github-token" value="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" placeholder="أدخل رمز GitHub Token (ghp_...)" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-family: inherit; direction: ltr;">
+                <input type="password" id="github-token" placeholder="أدخل رمز GitHub Token (ghp_...)" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-family: inherit; direction: ltr;">
                 <button class="copy-code-btn" style="background: #2ea043; color: white;" onclick="uploadToGitHub()" id="upload-github-btn">⬆️ رفع التعديلات مباشرة إلى GitHub</button>
             </div>
         </div>
@@ -372,7 +372,7 @@
         "stock": 3,
         "desc": "Coool",
         "images": [
-            "https://res.cloudinary.com/dgs0lzuni/image/upload/v1778107498/Picsart_26-05-06_18-44-19-212_lbrvap.jpg"
+            "https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016384/1777663738410_myuma2.png"
         ],
         "tag": "أزياء",
         "tagType": "ذهبي",
@@ -746,5 +746,7 @@
             initSlider(); 
         };
     </script>
+
+
 </body>
 </html>
