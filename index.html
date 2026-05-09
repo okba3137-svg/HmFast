@@ -201,8 +201,8 @@
 
     <section class="slider-section" id="banner-slider" style="display: block;">
         <div class="slider-container">
-            <div class="slider-wrapper" id="slider-wrapper" style="transform: translateX(-100%);"><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778107498/Picsart_26-05-06_18-44-19-212_lbrvap.jpg" class="slide" alt="Banner"><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778107499/Picsart_26-05-06_18-43-07-599_qvdsbv.jpg" class="slide" alt="Banner"><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778107499/Picsart_26-05-06_18-41-44-561_aoxpeb.jpg" class="slide" alt="Banner"></div>
-            <div class="slider-dots" id="slider-dots"><span class="dot" onclick="goToSlide(0)"></span><span class="dot active" onclick="goToSlide(1)"></span><span class="dot" onclick="goToSlide(2)"></span></div>
+            <div class="slider-wrapper" id="slider-wrapper" style="transform: translateX(0%);"><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778107498/Picsart_26-05-06_18-44-19-212_lbrvap.jpg" class="slide" alt="Banner"><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778107499/Picsart_26-05-06_18-43-07-599_qvdsbv.jpg" class="slide" alt="Banner"><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778107499/Picsart_26-05-06_18-41-44-561_aoxpeb.jpg" class="slide" alt="Banner"></div>
+            <div class="slider-dots" id="slider-dots"><span class="dot active" onclick="goToSlide(0)"></span><span class="dot" onclick="goToSlide(1)"></span><span class="dot" onclick="goToSlide(2)"></span></div>
         </div>
     </section>
 
@@ -217,7 +217,119 @@
     <div id="toast-container"></div>
 
     <main class="products-section" id="main-products-section" style="display: block;">
-        <div class="products-grid" id="products-grid"><div style="text-align:center; grid-column: 1/-1; padding: 40px; color:#777;">لم يتم العثور على منتجات مطابقة 🔍</div></div>
+        <div class="products-grid" id="products-grid">
+                <div class="product-card">
+                    <div class="image-wrapper" onclick="openProductModal(7)">
+                        <img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016384/1777663738410_myuma2.png" class="product-img" loading="lazy" style="">
+                        
+                    </div>
+                    <div class="product-info">
+                        <div class="tags-row"><span class="tag-red" style="background-color: #d13054;">عروض</span><span class="stock-badge ok">المتبقي: 5</span></div>
+                        <div class="product-title" onclick="openProductModal(7)">مباخره</div>
+                        <div class="price-row">
+                            <div class="price-info"><span class="product-price">15 $</span></div>
+                            <button class="cart-btn-circle" onclick="addToCart(7)">
+                                <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="image-wrapper" onclick="openProductModal(6)">
+                        <img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016381/1777663843959_z5ridu.png" class="product-img" loading="lazy" style="">
+                        
+                    </div>
+                    <div class="product-info">
+                        <div class="tags-row"><span class="tag-red" style="background-color: #d13054;">عروض</span><span class="stock-badge low">المتبقي: 1</span></div>
+                        <div class="product-title" onclick="openProductModal(6)">مباخره فاخر</div>
+                        <div class="price-row">
+                            <div class="price-info"><span class="product-price">15 $</span></div>
+                            <button class="cart-btn-circle" onclick="addToCart(6)">
+                                <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="image-wrapper" onclick="openProductModal(5)">
+                        <img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778107498/Picsart_26-05-06_18-44-19-212_lbrvap.jpg" class="product-img" loading="lazy" style="">
+                        
+                    </div>
+                    <div class="product-info">
+                        <div class="tags-row"><span class="tag-red" style="background-color: #d13054;">عروض</span><span class="stock-badge low">المتبقي: 2</span></div>
+                        <div class="product-title" onclick="openProductModal(5)">مباخر</div>
+                        <div class="price-row">
+                            <div class="price-info"><span class="product-price">300 $</span></div>
+                            <button class="cart-btn-circle" onclick="addToCart(5)">
+                                <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="image-wrapper" onclick="openProductModal(1)">
+                        <img src="https://images.unsplash.com/photo-1590845947698-8924d7409b56?w=500" class="product-img" loading="lazy" style="">
+                        
+                    </div>
+                    <div class="product-info">
+                        <div class="tags-row"><span class="tag-red" style="background-color: #d13054;">توفير</span><span class="stock-badge ok">المتبقي: 15</span></div>
+                        <div class="product-title" onclick="openProductModal(1)">ميزان إلكتروني صناعي دقيق</div>
+                        <div class="price-row">
+                            <div class="price-info"><span class="product-price">47,000 $</span></div>
+                            <button class="cart-btn-circle" onclick="addToCart(1)">
+                                <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="image-wrapper" onclick="openProductModal(2)">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" class="product-img" loading="lazy" style="">
+                        
+                    </div>
+                    <div class="product-info">
+                        <div class="tags-row"><span class="tag-red" style="background-color: green;">أزياء</span><span class="stock-badge low">المتبقي: 2</span></div>
+                        <div class="product-title" onclick="openProductModal(2)">تيشيرت قطني صيفي كاجوال</div>
+                        <div class="price-row">
+                            <div class="price-info"><span class="product-price">6,900 $</span></div>
+                            <button class="cart-btn-circle" onclick="addToCart(2)">
+                                <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="image-wrapper" onclick="openProductModal(3)">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" class="product-img" loading="lazy" style="">
+                        
+                    </div>
+                    <div class="product-info">
+                        <div class="tags-row"><span class="tag-red" style="background-color: #FF5722;">عروض</span><span class="stock-badge low">المتبقي: 3</span></div>
+                        <div class="product-title" onclick="openProductModal(3)">سماعات بلوتوث عازلة للضوضاء</div>
+                        <div class="price-row">
+                            <div class="price-info"><span class="product-price">12,000 $</span></div>
+                            <button class="cart-btn-circle" onclick="addToCart(3)">
+                                <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="image-wrapper" onclick="openProductModal(4)">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500" class="product-img" loading="lazy" style="">
+                        
+                    </div>
+                    <div class="product-info">
+                        <div class="tags-row"><span class="tag-red" style="background-color: blue;">حصري</span><span class="stock-badge ok">المتبقي: 8</span></div>
+                        <div class="product-title" onclick="openProductModal(4)">حقيبة ظهر عصرية للسفر</div>
+                        <div class="price-row">
+                            <div class="price-info"><span class="product-price">8,000 $</span></div>
+                            <button class="cart-btn-circle" onclick="addToCart(4)">
+                                <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div></div>
     </main>
 
     <div id="admin-panel" style="display: none;">
@@ -291,7 +403,7 @@
         <div class="admin-table-container">
             <table class="admin-table">
                 <thead><tr><th>ID</th><th>صورة</th><th>الاسم</th><th>السعر</th><th>المخزون الكلي</th><th>إجراءات</th></tr></thead>
-                <tbody id="admin-products-tbody"><tr><td>7</td><td><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016384/1777663738410_myuma2.png" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>تيشيرت قطني صيفي كاجوال</td><td>300</td><td><b style="color:green">2</b></td><td><button class="action-btn btn-edit" onclick="editProduct(7)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(7)">حذف 🗑️</button></td></tr><tr><td>6</td><td><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016384/1777663738410_myuma2.png" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>سلس ذهب</td><td>200</td><td><b style="color:green">3</b></td><td><button class="action-btn btn-edit" onclick="editProduct(6)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(6)">حذف 🗑️</button></td></tr><tr><td>5</td><td><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778107498/Picsart_26-05-06_18-44-19-212_lbrvap.jpg" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>مباخر</td><td>300</td><td><b style="color:green">2</b></td><td><button class="action-btn btn-edit" onclick="editProduct(5)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(5)">حذف 🗑️</button></td></tr><tr><td>1</td><td><img src="https://images.unsplash.com/photo-1590845947698-8924d7409b56?w=500" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>ميزان إلكتروني صناعي دقيق</td><td>47,000</td><td><b style="color:green">15</b></td><td><button class="action-btn btn-edit" onclick="editProduct(1)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(1)">حذف 🗑️</button></td></tr><tr><td>2</td><td><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>تيشيرت قطني صيفي كاجوال</td><td>6,900</td><td><b style="color:green">2</b></td><td><button class="action-btn btn-edit" onclick="editProduct(2)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(2)">حذف 🗑️</button></td></tr><tr><td>3</td><td><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>سماعات بلوتوث عازلة للضوضاء</td><td>12,000</td><td><b style="color:green">3</b></td><td><button class="action-btn btn-edit" onclick="editProduct(3)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(3)">حذف 🗑️</button></td></tr><tr><td>4</td><td><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>حقيبة ظهر عصرية للسفر</td><td>8,000</td><td><b style="color:green">8</b></td><td><button class="action-btn btn-edit" onclick="editProduct(4)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(4)">حذف 🗑️</button></td></tr></tbody>
+                <tbody id="admin-products-tbody"><tr><td>7</td><td><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016384/1777663738410_myuma2.png" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>مباخره</td><td>15</td><td><b style="color:green">5</b></td><td><button class="action-btn btn-edit" onclick="editProduct(7)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(7)">حذف 🗑️</button></td></tr><tr><td>6</td><td><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016381/1777663843959_z5ridu.png" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>مباخره فاخر</td><td>15</td><td><b style="color:green">1</b></td><td><button class="action-btn btn-edit" onclick="editProduct(6)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(6)">حذف 🗑️</button></td></tr><tr><td>5</td><td><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778107498/Picsart_26-05-06_18-44-19-212_lbrvap.jpg" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>مباخر</td><td>300</td><td><b style="color:green">2</b></td><td><button class="action-btn btn-edit" onclick="editProduct(5)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(5)">حذف 🗑️</button></td></tr><tr><td>1</td><td><img src="https://images.unsplash.com/photo-1590845947698-8924d7409b56?w=500" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>ميزان إلكتروني صناعي دقيق</td><td>47,000</td><td><b style="color:green">15</b></td><td><button class="action-btn btn-edit" onclick="editProduct(1)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(1)">حذف 🗑️</button></td></tr><tr><td>2</td><td><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>تيشيرت قطني صيفي كاجوال</td><td>6,900</td><td><b style="color:green">2</b></td><td><button class="action-btn btn-edit" onclick="editProduct(2)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(2)">حذف 🗑️</button></td></tr><tr><td>3</td><td><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>سماعات بلوتوث عازلة للضوضاء</td><td>12,000</td><td><b style="color:green">3</b></td><td><button class="action-btn btn-edit" onclick="editProduct(3)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(3)">حذف 🗑️</button></td></tr><tr><td>4</td><td><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500" width="40" height="40" style="object-fit:cover; border-radius:4px;"></td><td>حقيبة ظهر عصرية للسفر</td><td>8,000</td><td><b style="color:green">8</b></td><td><button class="action-btn btn-edit" onclick="editProduct(4)">تعديل ✏️</button><button class="action-btn btn-delete" onclick="deleteProduct(4)">حذف 🗑️</button></td></tr></tbody>
             </table>
         </div>
 
@@ -317,33 +429,33 @@
         </div>
     
     
-    <div class="detail-modal" id="detail-modal">
+    <div class="detail-modal" id="detail-modal" style="display: none;">
         <div class="detail-content">
-            <div class="detail-header"><h2 id="modal-title">اسم المنتج</h2><span class="detail-close" onclick="closeProductModal()">×</span></div>
+            <div class="detail-header"><h2 id="modal-title">سلس ذهب</h2><span class="detail-close" onclick="closeProductModal()">×</span></div>
             <div class="detail-body">
                 <div class="detail-img-area">
                     <div class="main-img-container" onclick="openFullscreenViewer()">
-                        <img id="modal-img" src="">
+                        <img id="modal-img" src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016384/1777663738410_myuma2.png">
                         <div id="modal-out-overlay" style="display:none;" class="sold-out-overlay"><div class="sold-out-text">نفدت الكمية</div></div>
                     </div>
-                    <div class="thumbnails-container" id="modal-thumbnails"></div>
+                    <div class="thumbnails-container" id="modal-thumbnails"><img src="https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016384/1777663738410_myuma2.png" class="thumbnail-img active" onclick="changeMainImage(this, 'https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016384/1777663738410_myuma2.png')"></div>
                 </div>
                 <div class="detail-info-area">
-                    <div class="detail-price" id="modal-price">0 $</div>
-                    <div id="modal-stock-info" style="margin-bottom: 10px; font-size: 14px;"></div>
+                    <div class="detail-price" id="modal-price">200 $</div>
+                    <div id="modal-stock-info" style="margin-bottom: 10px; font-size: 14px;"><span style="color: var(--orange); font-weight:bold;">الرجاء اختيار المقاس/النوع لمعرفة الكمية</span></div>
                     <div class="detail-section-title">وصف المنتج:</div>
-                    <p class="detail-desc" id="modal-desc"></p>
-                    <div id="modal-options-container" style="display: none;">
+                    <p class="detail-desc" id="modal-desc">Coool</p>
+                    <div id="modal-options-container" style="display: block;">
                         <div class="detail-section-title">اختر المقاس / النوع:</div>
-                        <div class="size-options" id="modal-options"></div>
+                        <div class="size-options" id="modal-options"><button class="size-btn" style="" onclick="selectOption(this, 'M', 2)">M (2)</button><button class="size-btn" style="" onclick="selectOption(this, 'L', 1)">L (1)</button></div>
                     </div>
                     <div class="detail-section-title">الكمية:</div>
-                    <div class="qty-input-container">
+                    <div class="qty-input-container" style="opacity: 1; pointer-events: auto;">
                         <button onclick="changeModalQuantity(1)">+</button>
                         <input type="number" id="modal-qty-input" value="1" min="1" readonly="">
                         <button onclick="changeModalQuantity(-1)">-</button>
                     </div>
-                    <button class="add-to-cart-large" id="modal-add-btn" onclick="addCurrentToCart()">أضف إلى السلة ⚡</button>
+                    <button class="add-to-cart-large" id="modal-add-btn" onclick="addCurrentToCart()" disabled="">اختر المقاس أولاً</button>
                 </div>
             </div>
         </div>
@@ -383,62 +495,37 @@
     <a href="https://wa.me/967774357019" class="floating-wa" target="_blank" title="تواصل معنا عبر واتساب">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 414.4c-32.8 0-65-8.8-93.1-25.4l-6.7-4-69.1 18.1 18.4-67.3-4.4-7C49.9 297.8 40.5 261 40.5 223.9c0-101.4 82.5-184 183.5-184 49.1 0 95.3 19.1 130 53.8 34.7 34.7 53.8 80.9 53.8 130-.1 101.5-82.6 184.7-183.9 184.7zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-1.5-2.6-.1-4 1.3-5.3 1.2-1.2 2.8-3.2 4.2-4.9 1.4-1.6 1.9-2.8 2.8-4.6.9-1.9.5-3.7-.2-5.1-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
     </a>
-    <button class="scroll-top-btn" id="scroll-top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="العودة للأعلى">⬆️</button>
+    <button class="scroll-top-btn visible" id="scroll-top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="العودة للأعلى">⬆️</button>
 
     <script id="main-script">
         // !!PRODUCTS_ARRAY_START!!
         let products = [
     {
         "id": 7,
-        "title": "تيشيرت قطني صيفي كاجوال",
-        "price": 300,
-        "stock": 2,
-        "desc": "روعه فاخر",
+        "title": "مباخره",
+        "price": 15,
+        "stock": 5,
+        "desc": "(موزع ومشابك) مناسب لتزيين غرفة النوم، ديكور المنزل، زينة عربية، موزع بخور منزلي شرق أوسطي، زينة شمعدان،",
         "images": [
             "https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016384/1777663738410_myuma2.png"
         ],
-        "tag": "أزياء",
+        "tag": "عروض",
         "tagType": "",
-        "options": [
-            {
-                "name": "S",
-                "stock": 1
-            },
-            {
-                "name": "M",
-                "stock": 1
-            },
-            {
-                "name": "L",
-                "stock": 0
-            },
-            {
-                "name": "XL",
-                "stock": 0
-            }
-        ]
+        "options": []
     },
     {
         "id": 6,
-        "title": "سلس ذهب",
-        "price": 200,
-        "stock": 3,
-        "desc": "Coool",
+        "title": "مباخره فاخر",
+        "price": 15,
+        "stock": 1,
+        "desc": "حامل بخور بغطاء من سبائك الزنك، زينة منزلية على شكل قمع، تصميم بسيط، مناسب لتزيين المنزل، حامل بخور، غرفة، غرفة معيشة، قطعة مركزية، مكتب، زينة حامل شموع",
         "images": [
-            "https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016384/1777663738410_myuma2.png"
+            "https://res.cloudinary.com/dgs0lzuni/image/upload/v1778016381/1777663843959_z5ridu.png",
+            "https://res.cloudinary.com/dgs0lzuni/image/upload/v1778290944/Screenshot_20260508_213851_Temu_y4r65s.jpg"
         ],
-        "tag": "أزياء",
-        "tagType": "ذهبي",
-        "options": [
-            {
-                "name": "M",
-                "stock": 2
-            },
-            {
-                "name": "L",
-                "stock": 1
-            }
-        ]
+        "tag": "عروض",
+        "tagType": "",
+        "options": []
     },
     {
         "id": 5,
@@ -1048,6 +1135,7 @@
             initSlider(); 
         };
     </script>
+
 
 
 
