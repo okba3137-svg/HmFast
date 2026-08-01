@@ -513,7 +513,7 @@ header{
       <div class="img-wrap">
         <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="ساعة ذكية رياضية" loading="lazy">
         <div class="discount-badge">-29%</div>
-        <div class="best-seller-badge"><i class="fas fa-fire"></i> الأكثر مبيعاً</div>
+        
       </div>
       <div class="info">
         <h3>ساعة ذكية رياضية</h3>
@@ -527,7 +527,7 @@ header{
       <div class="img-wrap">
         <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600" alt="حقيبة ظهر عصرية" loading="lazy">
         
-        <div class="best-seller-badge"><i class="fas fa-fire"></i> الأكثر مبيعاً</div>
+        
       </div>
       <div class="info">
         <h3>حقيبة ظهر عصرية</h3>
@@ -541,7 +541,7 @@ header{
       <div class="img-wrap">
         <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=600" alt="عطر رجالي فاخر 100ml" loading="lazy">
         <div class="discount-badge">-31%</div>
-        <div class="best-seller-badge"><i class="fas fa-fire"></i> الأكثر مبيعاً</div>
+        
       </div>
       <div class="info">
         <h3>عطر رجالي فاخر 100ml</h3>
@@ -569,7 +569,7 @@ header{
       <div class="img-wrap">
         <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="حذاء رياضي عصري" loading="lazy">
         <div class="discount-badge">-30%</div>
-        
+        <div class="best-seller-badge"><i class="fas fa-fire"></i> الأكثر مبيعاً</div>
       </div>
       <div class="info">
         <h3>حذاء رياضي عصري</h3>
@@ -583,7 +583,7 @@ header{
       <div class="img-wrap">
         <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600" alt="شاحن سريع 65W" loading="lazy">
         
-        <div class="best-seller-badge"><i class="fas fa-fire"></i> الأكثر مبيعاً</div>
+        
       </div>
       <div class="info">
         <h3>شاحن سريع 65W</h3>
@@ -593,32 +593,18 @@ header{
           <button class="mini" onclick="event.stopPropagation();toggleFavorite(7)"><i class="far fa-heart"></i></button>
         </div>
       </div>
-    </div><div class="product-card sold-out" data-testid="product-card-8" onclick="openProductModal(8)">
+    </div><div class="product-card " data-testid="product-card-8" onclick="openProductModal(8)">
       <div class="img-wrap">
         <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600" alt="طقم فناجين قهوة" loading="lazy">
         <div class="discount-badge">-38%</div>
-        <div class="sold-out-badge"><i class="fas fa-ban"></i> خلص</div>
+        
       </div>
       <div class="info">
         <h3>طقم فناجين قهوة</h3>
         <div class="price">75 $ <span class="old-price">120 $</span></div>
         <div class="card-actions">
-          <button disabled="" style="opacity:.5;cursor:not-allowed" onclick="event.stopPropagation();">خلص</button>
+          <button onclick="event.stopPropagation();quickAddToCart(8)">أضف للسلة</button>
           <button class="mini" onclick="event.stopPropagation();toggleFavorite(8)"><i class="far fa-heart"></i></button>
-        </div>
-      </div>
-    </div><div class="product-card " data-testid="product-card-1784956992890" onclick="openProductModal(1784956992890)">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600" alt="Hdh" loading="lazy">
-        <div class="discount-badge">-20%</div>
-        
-      </div>
-      <div class="info">
-        <h3>Hdh</h3>
-        <div class="price">55 $ <span class="old-price">69 $</span></div>
-        <div class="card-actions">
-          <button onclick="event.stopPropagation();quickAddToCart(1784956992890)">أضف للسلة</button>
-          <button class="mini" onclick="event.stopPropagation();toggleFavorite(1784956992890)"><i class="far fa-heart"></i></button>
         </div>
       </div>
     </div></main>
@@ -998,7 +984,7 @@ const DEFAULT_SLIDES = [
 ];
 
 /* كلمة سر الأدمن - عند كتابتها في شريط البحث تفتح صفحة الأدمن */
-const ADMIN_PASSWORD = 'admin2024';
+
 
 /* ========== STORAGE ========== */
 const LS = {
@@ -1548,7 +1534,10 @@ function exportOrderExcel(){
   let html='<table border="1"><tr><th>المنتج</th><th>الكمية</th><th>السعر</th><th>الإجمالي</th></tr>';
   cart.forEach(i=>html+=`<tr><td>${i.name}</td><td>${i.qty}</td><td>${i.price}</td><td>${i.price*i.qty}</td></tr>`);
   html+='</table>';
-  const blob=new Blob(['\ufeff<html><head><meta charset="utf-8"></head><body>'+html+'</body></html>'],{type:'application/vnd.ms-excel'});
+  const blob=new Blob(['\ufeff<html><head><meta charset="utf-8"></head><body>'+html+'
+<script>window.openAdminPanel=window.tryOpenAdmin=window.switchAdminTab=function(){if(!document.getElementById("admin-modal"))return;};</script>
+<script id="hmfast-seed">(function(){try{var d={"hmfast_products":"[{\"id\":1,\"name\":\"سماعات لاسلكية Pro\",\"category\":\"إلكترونيات\",\"price\":299,\"oldPrice\":450,\"desc\":\"سماعات بلوتوث بجودة صوت عالية، عزل ضوضاء نشط، بطارية تدوم 30 ساعة.\",\"images\":[\"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600\",\"https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600\",\"https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"stock\":15,\"color\":\"\"}],\"featured\":true},{\"id\":2,\"name\":\"ساعة ذكية رياضية\",\"category\":\"إلكترونيات\",\"price\":499,\"oldPrice\":699,\"desc\":\"ساعة ذكية بشاشة AMOLED، مراقبة معدل ضربات القلب، مقاومة للماء IP68.\",\"images\":[\"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600\",\"https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600\"],\"variants\":[{\"size\":\"42mm\",\"dim\":\"\",\"stock\":8,\"color\":\"\"},{\"size\":\"46mm\",\"dim\":\"\",\"stock\":0,\"color\":\"\"}],\"featured\":false},{\"id\":3,\"name\":\"حقيبة ظهر عصرية\",\"category\":\"إكسسوارات\",\"price\":180,\"desc\":\"حقيبة ظهر بتصميم أنيق، جيوب متعددة، مقاومة للماء ومناسبة للسفر والعمل.\",\"images\":[\"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600\",\"https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"stock\":20,\"color\":\"\"}]},{\"id\":4,\"name\":\"عطر رجالي فاخر 100ml\",\"category\":\"عطور\",\"price\":220,\"oldPrice\":320,\"desc\":\"عطر رجالي بنفحات شرقية دافئة، ثبات يصل إلى 12 ساعة.\",\"images\":[\"https://images.unsplash.com/photo-1541643600914-78b084683601?w=600\",\"https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"100ml\",\"stock\":5,\"color\":\"\"},{\"size\":\"\",\"dim\":\"50ml\",\"stock\":12,\"color\":\"\"}]},{\"id\":5,\"name\":\"مصباح مكتب LED\",\"category\":\"منزل\",\"price\":135,\"desc\":\"مصباح مكتب قابل للتعديل، 3 درجات إضاءة، شحن USB.\",\"images\":[\"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"stock\":10,\"color\":\"\"}]},{\"id\":6,\"name\":\"حذاء رياضي عصري\",\"category\":\"أزياء\",\"price\":349,\"oldPrice\":499,\"desc\":\"حذاء رياضي مريح، مقاس متعدد، مناسب للاستخدام اليومي والجري.\",\"images\":[\"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600\",\"https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600\"],\"variants\":[{\"size\":\"40\",\"dim\":\"\",\"stock\":3,\"color\":\"\"},{\"size\":\"42\",\"dim\":\"\",\"stock\":6,\"color\":\"\"},{\"size\":\"44\",\"dim\":\"\",\"stock\":0,\"color\":\"\"},{\"size\":\"46\",\"dim\":\"\",\"stock\":2,\"color\":\"\"}],\"featured\":true},{\"id\":7,\"name\":\"شاحن سريع 65W\",\"category\":\"إلكترونيات\",\"price\":95,\"desc\":\"شاحن سريع بمنفذين USB-C ومنفذ USB-A، متوافق مع جميع الأجهزة.\",\"images\":[\"https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"stock\":25,\"color\":\"\"}]},{\"id\":8,\"name\":\"طقم فناجين قهوة\",\"category\":\"منزل\",\"price\":75,\"oldPrice\":120,\"desc\":\"طقم فناجين سيراميك أنيق، 6 قطع، مناسب للضيافة.\",\"images\":[\"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600\"],\"variants\":[{\"size\":\"M\",\"dim\":\"50ml\",\"color\":\"أزرق\",\"stock\":1}],\"featured\":false}]"};for(var k in d){if(localStorage.getItem(k)===null)localStorage.setItem(k,d[k]);}}catch(e){}})();</script>
+</body></html>'],{type:'application/vnd.ms-excel'});
   const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='HmFast-order-'+Date.now()+'.xls';a.click();
   toast('تم تصدير الطلب','success');
 }
@@ -1588,12 +1577,89 @@ function openFavoritesModal(){
   document.getElementById('favorites-modal').classList.add('open');
 }
 
+/* ========== ADMIN ========== */
+
+
+
+
+
+
+/* --- Dashboard --- */
+
+
+/* --- Products CRUD --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Orders --- */
+
+
+
+
+
+
+
+
+
+/* --- Categories --- */
+
+
+
+
+
+/* --- Coupons --- */
+
+
+
+
+/* --- Slider admin --- */
+
+
+
+
+
+
+/* --- Invoices (partial refund) --- */
+
+
+
+
+/* --- Settings --- */
+
 
 function applySettings(){
   document.querySelector('.logo').innerHTML=`<i class="fas fa-bolt"></i> ${settings.storeName}`;
   document.title=`${settings.storeName} ⚡ متجر إلكتروني`;
   renderProducts();
 }
+
+
+/* --- Currency manager --- */
+
+
+
+
+
+
+
+/* --- Payment methods --- */
+
+
+
+
+
+/* --- Utility --- */
 
 
 /* ========== SLIDER ========== */
@@ -1812,60 +1878,81 @@ function attachLightboxTrigger(){
 }
 
 /* ========== INIT ========== */
+/* =========================================
+   توليد كود الموقع مع كل التعديلات
+========================================= */
+
+
+/* =========================================
+   وظيفة الرفع المباشر
+========================================= */
+
+
+/* =========================================
+   إضافة فاتورة (لصق من الواتساب)
+========================================= */
+let invoiceDraft=null;
+
+function invNumFrom(str){
+  if(str==null) return 0;
+  let s=(''+str).replace(/[٬،,]/g,'').replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+  const m=s.match(/-?\d+(?:\.\d+)?/);
+  return m?parseFloat(m[0]):0;
+}
+function invSymFrom(str){
+  const m=(''+str).match(/\$|﷼|ر\.?س|ر\.?ي|€|£|SAR|USD|YER|درهم|جنيه/i);
+  return m?m[0]:'';
+}
+function afterColon(line){
+  const idx=line.indexOf(':')>-1?line.indexOf(':'):line.indexOf('：');
+  return idx>-1?line.slice(idx+1).trim():line.trim();
+}
+function stripEmojiLabel(s){
+  return s.replace(/^[^\p{L}\p{N}]+/u,'').trim();
+}
+
+
+
+
+
+function invItemRowHTML(it,idx){
+  return `<div class="variant-row" data-inv-row style="grid-template-columns:1fr 70px 90px 40px">
+    <input data-inv-name placeholder="اسم المنتج" value="${(it.name||'').replace(/"/g,'&quot;')}">
+    <input data-inv-qty type="number" min="1" step="1" placeholder="كمية" value="${it.qty||1}">
+    <input data-inv-price type="number" step="any" placeholder="سعر الوحدة" value="${it.price||0}">
+    <button onclick="removeInvoiceItemRow(${idx})" data-testid="del-inv-item-${idx}"><i class="fas fa-trash"></i></button>
+  </div>`;
+}
 
 
 
 
 
 
-window.addEventListener('DOMContentLoaded', ()=>{
-  initTheme();
-  loadState();
-  loadTranslations();
-  applySettings();
-  initLang();
-  renderFilters();
-  renderProducts();
-  updateBadges();
-  updateCurrencySwitcher();
-  initSlider();
-  initLightboxEvents();
-  attachLightboxTrigger();
-
-  document.getElementById('theme-btn').addEventListener('click', toggleTheme);
-  document.getElementById('search-input').addEventListener('input', (e)=>{
-    // اكتشاف كلمة سر الأدمن
-    const val=(e.target.value||'').trim();
-    
-    renderProducts();
-  });
-
-  // Close modals on backdrop click (except image-lightbox handled separately)
-  document.querySelectorAll('.modal-backdrop').forEach(m=>{
-    if(m.id==='image-lightbox') return;
-    m.addEventListener('click', (e)=>{ if(e.target===m) m.classList.remove('open') });
-  });
-  // ESC to close top modals
-  document.addEventListener('keydown', (e)=>{
-    if(e.key==='Escape'){
-      // Close lightbox first if open
-      const lb=document.getElementById('image-lightbox');
-      if(lb.classList.contains('open')) return; // handled inside
-      document.querySelectorAll('.modal-backdrop.open').forEach(m=>m.classList.remove('open'));
-    }
-  });
-
-  // Hide loading + show welcome
-  setTimeout(()=>{
-    document.getElementById('loading-overlay').classList.add('hidden');
-    setTimeout(showWelcomeModal, 800);
-  }, 500);
-});
-</script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2089a697c029602',t:'MTc4NDk1NTY0OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;}" crossorigin="anonymous"></script>
 
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;}" crossorigin="anonymous"></script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;}" crossorigin="anonymous"></script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;}" crossorigin="anonymous"></script>
-<script id="hmfast-seed">(function(){try{var d={"hmfast_products":"[{\"id\":1,\"name\":\"سماعات لاسلكية Pro\",\"category\":\"إلكترونيات\",\"price\":299,\"oldPrice\":450,\"desc\":\"سماعات بلوتوث بجودة صوت عالية، عزل ضوضاء نشط، بطارية تدوم 30 ساعة.\",\"images\":[\"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600\",\"https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600\",\"https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]},{\"id\":2,\"name\":\"ساعة ذكية رياضية\",\"category\":\"إلكترونيات\",\"price\":499,\"oldPrice\":699,\"desc\":\"ساعة ذكية بشاشة AMOLED، مراقبة معدل ضربات القلب، مقاومة للماء IP68.\",\"images\":[\"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600\",\"https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]},{\"id\":3,\"name\":\"حقيبة ظهر عصرية\",\"category\":\"إكسسوارات\",\"price\":180,\"desc\":\"حقيبة ظهر بتصميم أنيق، جيوب متعددة، مقاومة للماء ومناسبة للسفر والعمل.\",\"images\":[\"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600\",\"https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]},{\"id\":4,\"name\":\"عطر رجالي فاخر 100ml\",\"category\":\"عطور\",\"price\":220,\"oldPrice\":320,\"desc\":\"عطر رجالي بنفحات شرقية دافئة، ثبات يصل إلى 12 ساعة.\",\"images\":[\"https://images.unsplash.com/photo-1541643600914-78b084683601?w=600\",\"https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]},{\"id\":5,\"name\":\"مصباح مكتب LED\",\"category\":\"منزل\",\"price\":135,\"desc\":\"مصباح مكتب قابل للتعديل، 3 درجات إضاءة، شحن USB.\",\"images\":[\"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]},{\"id\":6,\"name\":\"حذاء رياضي عصري\",\"category\":\"أزياء\",\"price\":349,\"oldPrice\":499,\"desc\":\"حذاء رياضي مريح، مقاس متعدد، مناسب للاستخدام اليومي والجري.\",\"images\":[\"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600\",\"https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]},{\"id\":7,\"name\":\"شاحن سريع 65W\",\"category\":\"إلكترونيات\",\"price\":95,\"desc\":\"شاحن سريع بمنفذين USB-C ومنفذ USB-A، متوافق مع جميع الأجهزة.\",\"images\":[\"https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]},{\"id\":8,\"name\":\"طقم فناجين قهوة\",\"category\":\"منزل\",\"price\":75,\"oldPrice\":120,\"desc\":\"طقم فناجين سيراميك أنيق، 6 قطع، مناسب للضيافة.\",\"images\":[\"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":0}],\"featured\":false},{\"id\":1784956992890,\"name\":\"Hdh\",\"category\":\"إلكترونيات\",\"price\":55,\"oldPrice\":69,\"desc\":\"ميزة تتبع الطلب للمشتري\",\"images\":[\"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600\",\"https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600\",\"https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]}]","hmfast_settings":"{\"storeName\":\"HmFast\",\"currency\":\"$\",\"shipping\":25,\"freeShippingThreshold\":500,\"whatsapp\":\"967774357019\",\"vat\":5,\"footer\":\"HmFast © جميع الحقوق محفوظة\"}"};for(var k in d){localStorage.setItem(k,d[k]);}}catch(e){}})();</script></body></html>
+/* =========================================
+   تحميل نسخة HTML كاملة للجوال
+========================================= */
+
+
+
+
+/* =========================================
+   إدارة الترجمة (لوحة الأدمن)
+========================================= */
+
+let registeredTerms=[];
+function registerTerm(ar){
+  if(!ar||!/[\u0600-\u06FF]/.test(ar)) return;
+  if(registeredTerms.indexOf(ar)===-1 && !AR2EN_ALL[ar]) registeredTerms.push(ar);
+}
+function termEnglish(ar){
+  const en=AR2EN_ALL[ar];
+  return (en && en!==ar) ? en : '';
+}
+
+
+
+
+
