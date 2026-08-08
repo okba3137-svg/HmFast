@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="light"><head>
+<html lang="ar" dir="rtl" data-theme="light"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
 <meta name="theme-color" content="#0b1533">
@@ -449,7 +449,7 @@ header{
   white-space:pre-wrap;line-height:1.9;border:1px dashed var(--gold)
 }
 .cur-row-rate{width:90px;padding:5px 7px;border:1px solid var(--border);border-radius:6px;background:var(--card);color:var(--text)}
-</style><style type="text/css">* {user-select: auto !important; -webkit-user-select: auto !important;}</style></head><body class="ltr"><input type="hidden" id="inject_idm_text_selection">
+</style><style type="text/css">* {user-select: auto !important; -webkit-user-select: auto !important;}</style></head><body class=""><input type="hidden" id="inject_idm_text_selection">
 <style type="text/css">* {user-select: auto !important; -webkit-user-select: auto !important;}</style><input type="hidden" id="inject_idm_text_selection">
 
 
@@ -462,18 +462,18 @@ header{
 <!-- Header -->
 <header>
   <div class="header-inner">
-    <button class="lang-btn" id="lang-btn" onclick="toggleLang()" title="Change language / تغيير اللغة" data-testid="lang-toggle-btn"><i class="fas fa-globe"></i> <span class="lang-text">AR</span></button>
+    <button class="lang-btn" id="lang-btn" onclick="toggleLang()" title="Change language / تغيير اللغة" data-testid="lang-toggle-btn"><i class="fas fa-globe"></i> <span class="lang-text">EN</span></button>
     <div class="logo"><i class="fas fa-bolt"></i> HmFast</div>
     <div class="search-wrap">
-      <input id="search-input" type="search" placeholder="Search products..." data-i18n-ph="search_ph">
+      <input id="search-input" type="search" placeholder="ابحث عن منتج..." data-i18n-ph="search_ph">
       <i class="fas fa-search"></i>
     </div>
     <div class="header-actions">
       <span id="currency-switcher-wrap" style="display: inline-block;"><select id="currency-switcher" class="currency-select" data-testid="currency-switcher" onchange="setActiveCurrency(this.value)"><option value="USD" selected="">$ USD</option><option value="YER">﷼ YER</option><option value="SAR">ر.س SAR</option></select></span>
-      <button class="icon-btn" id="theme-btn" title="Dark mode" data-i18n-title="theme_title" data-testid="theme-toggle-btn"><i class="fas fa-moon"></i></button>
-      <button class="icon-btn" onclick="openAccountModal()" title="Account" data-i18n-title="account_title" data-testid="account-btn"><i class="fas fa-user"></i></button>
-      <button class="icon-btn" onclick="openFavoritesModal()" title="Wishlist" data-i18n-title="fav_title" data-testid="favorites-btn"><i class="fas fa-heart"></i><span class="badge" id="fav-badge" style="display:none">0</span></button>
-      <button class="icon-btn" onclick="openCartModal()" title="Cart" data-i18n-title="cart_title" data-testid="cart-btn"><i class="fas fa-shopping-cart"></i><span class="badge" id="cart-badge" style="display: none;">2</span></button>
+      <button class="icon-btn" id="theme-btn" title="الوضع الليلي" data-i18n-title="theme_title" data-testid="theme-toggle-btn"><i class="fas fa-moon"></i></button>
+      <button class="icon-btn" onclick="openAccountModal()" title="الحساب" data-i18n-title="account_title" data-testid="account-btn"><i class="fas fa-user"></i></button>
+      <button class="icon-btn" onclick="openFavoritesModal()" title="المفضلة" data-i18n-title="fav_title" data-testid="favorites-btn"><i class="fas fa-heart"></i><span class="badge" id="fav-badge" style="display:none">0</span></button>
+      <button class="icon-btn" onclick="openCartModal()" title="السلة" data-i18n-title="cart_title" data-testid="cart-btn"><i class="fas fa-shopping-cart"></i><span class="badge" id="cart-badge" style="display:none">0</span></button>
     </div>
   </div>
 </header>
@@ -484,152 +484,26 @@ header{
     
     
     
-    <div class="slide has-text"><div><h2>Exclusive Offers ⚡</h2><p>Up to 50% off the latest products</p></div></div><div class="slide has-text"><div><h2>Fast Shipping to All Cities 🚀</h2><p>Delivery within 24–48 hours</p></div></div><div class="slide has-text active"><div><h2>Guaranteed Quality ✨</h2><p>Authentic products, full warranty</p></div></div><div class="slider-dots" id="slider-dots"><span class="" onclick="goSlide(0)"></span><span class="" onclick="goSlide(1)"></span><span class="active" onclick="goSlide(2)"></span></div>
+    <div class="slide has-text active"><div><h2>عروض حصرية ⚡</h2><p>خصومات تصل إلى 50% على أحدث المنتجات</p></div></div><div class="slide has-text"><div><h2>شحن سريع لكل المدن 🚀</h2><p>توصيل خلال 24-48 ساعة</p></div></div><div class="slide has-text"><div><h2>جودة مضمونة ✨</h2><p>منتجات أصلية بضمان كامل</p></div></div><div class="slider-dots" id="slider-dots"><span class="active" onclick="goSlide(0)"></span><span class="" onclick="goSlide(1)"></span><span class="" onclick="goSlide(2)"></span></div>
   </div>
 </section>
 
 <!-- Filters -->
-<section class="filters" id="filters"><button class="filter-chip active" onclick="setFilter('الكل')" data-testid="filter-الكل">All</button><button class="filter-chip " onclick="setFilter('الأكثر مبيعاً')" data-testid="filter-الأكثر مبيعاً"><i class="fas fa-fire" style="color:#dc2626"></i> Best Sellers</button><button class="filter-chip " onclick="setFilter('إلكترونيات')" data-testid="filter-إلكترونيات">Electronics</button><button class="filter-chip " onclick="setFilter('إكسسوارات')" data-testid="filter-إكسسوارات">Accessories</button><button class="filter-chip " onclick="setFilter('عطور')" data-testid="filter-عطور">Perfumes</button><button class="filter-chip " onclick="setFilter('منزل')" data-testid="filter-منزل">Home</button><button class="filter-chip " onclick="setFilter('أزياء')" data-testid="filter-أزياء">Fashion</button><select class="sort-select" onchange="setSort(this.value)" data-testid="sort-select">
-      <option value="default">Sort: Default</option>
-      <option value="price-asc">Price: Low to High</option>
-      <option value="price-desc">Price: High to Low</option>
-      <option value="name">Name (A–Z)</option>
+<section class="filters" id="filters"><button class="filter-chip active" onclick="setFilter('الكل')" data-testid="filter-الكل">الكل</button><button class="filter-chip " onclick="setFilter('الأكثر مبيعاً')" data-testid="filter-الأكثر مبيعاً"><i class="fas fa-fire" style="color:#dc2626"></i> الأكثر مبيعاً</button><button class="filter-chip " onclick="setFilter('إلكترونيات')" data-testid="filter-إلكترونيات">إلكترونيات</button><button class="filter-chip " onclick="setFilter('إكسسوارات')" data-testid="filter-إكسسوارات">إكسسوارات</button><button class="filter-chip " onclick="setFilter('عطور')" data-testid="filter-عطور">عطور</button><button class="filter-chip " onclick="setFilter('منزل')" data-testid="filter-منزل">منزل</button><button class="filter-chip " onclick="setFilter('أزياء')" data-testid="filter-أزياء">أزياء</button><select class="sort-select" onchange="setSort(this.value)" data-testid="sort-select">
+      <option value="default">الترتيب: افتراضي</option>
+      <option value="price-asc">السعر: الأقل</option>
+      <option value="price-desc">السعر: الأعلى</option>
+      <option value="name">الاسم أبجدياً</option>
     </select></section>
 
 <!-- Products -->
-<main class="products" id="products-grid"><div class="product-card " data-testid="product-card-1" onclick="openProductModal(1)">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600" alt="سماعات لاسلكية Pro" loading="lazy">
-        <div class="discount-badge">-34%</div>
-        <div class="best-seller-badge"><i class="fas fa-fire"></i> Best Seller</div>
-      </div>
-      <div class="info">
-        <h3>Wireless Headphones Pro</h3>
-        <div class="price">299 $ <span class="old-price">450 $</span></div>
-        <div class="card-actions">
-          <button onclick="event.stopPropagation();quickAddToCart(1)">Add to Cart</button>
-          <button class="mini" onclick="event.stopPropagation();toggleFavorite(1)"><i class="far fa-heart"></i></button>
-        </div>
-      </div>
-    </div><div class="product-card " data-testid="product-card-2" onclick="openProductModal(2)">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="ساعة ذكية رياضية" loading="lazy">
-        <div class="discount-badge">-29%</div>
-        
-      </div>
-      <div class="info">
-        <h3>Sports Smartwatch</h3>
-        <div class="price">499 $ <span class="old-price">699 $</span></div>
-        <div class="card-actions">
-          <button onclick="event.stopPropagation();quickAddToCart(2)">Add to Cart</button>
-          <button class="mini" onclick="event.stopPropagation();toggleFavorite(2)"><i class="far fa-heart"></i></button>
-        </div>
-      </div>
-    </div><div class="product-card " data-testid="product-card-3" onclick="openProductModal(3)">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600" alt="حقيبة ظهر عصرية" loading="lazy">
-        
-        
-      </div>
-      <div class="info">
-        <h3>Modern Backpack</h3>
-        <div class="price">180 $ </div>
-        <div class="card-actions">
-          <button onclick="event.stopPropagation();quickAddToCart(3)">Add to Cart</button>
-          <button class="mini" onclick="event.stopPropagation();toggleFavorite(3)"><i class="far fa-heart"></i></button>
-        </div>
-      </div>
-    </div><div class="product-card " data-testid="product-card-4" onclick="openProductModal(4)">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=600" alt="عطر رجالي فاخر 100ml" loading="lazy">
-        <div class="discount-badge">-31%</div>
-        
-      </div>
-      <div class="info">
-        <h3>Luxury Men's Perfume 100ml</h3>
-        <div class="price">220 $ <span class="old-price">320 $</span></div>
-        <div class="card-actions">
-          <button onclick="event.stopPropagation();quickAddToCart(4)">Add to Cart</button>
-          <button class="mini" onclick="event.stopPropagation();toggleFavorite(4)"><i class="far fa-heart"></i></button>
-        </div>
-      </div>
-    </div><div class="product-card " data-testid="product-card-5" onclick="openProductModal(5)">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600" alt="مصباح مكتب LED" loading="lazy">
-        
-        
-      </div>
-      <div class="info">
-        <h3>LED Desk Lamp</h3>
-        <div class="price">135 $ </div>
-        <div class="card-actions">
-          <button onclick="event.stopPropagation();quickAddToCart(5)">Add to Cart</button>
-          <button class="mini" onclick="event.stopPropagation();toggleFavorite(5)"><i class="far fa-heart"></i></button>
-        </div>
-      </div>
-    </div><div class="product-card " data-testid="product-card-6" onclick="openProductModal(6)">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="حذاء رياضي عصري" loading="lazy">
-        <div class="discount-badge">-30%</div>
-        <div class="best-seller-badge"><i class="fas fa-fire"></i> Best Seller</div>
-      </div>
-      <div class="info">
-        <h3>Modern Sneakers</h3>
-        <div class="price">349 $ <span class="old-price">499 $</span></div>
-        <div class="card-actions">
-          <button onclick="event.stopPropagation();quickAddToCart(6)">Add to Cart</button>
-          <button class="mini" onclick="event.stopPropagation();toggleFavorite(6)"><i class="far fa-heart"></i></button>
-        </div>
-      </div>
-    </div><div class="product-card " data-testid="product-card-7" onclick="openProductModal(7)">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600" alt="شاحن سريع 65W" loading="lazy">
-        
-        
-      </div>
-      <div class="info">
-        <h3>65W Fast Charger</h3>
-        <div class="price">95 $ </div>
-        <div class="card-actions">
-          <button onclick="event.stopPropagation();quickAddToCart(7)">Add to Cart</button>
-          <button class="mini" onclick="event.stopPropagation();toggleFavorite(7)"><i class="far fa-heart"></i></button>
-        </div>
-      </div>
-    </div><div class="product-card " data-testid="product-card-8" onclick="openProductModal(8)">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600" alt="طقم فناجين قهوة" loading="lazy">
-        <div class="discount-badge">-38%</div>
-        
-      </div>
-      <div class="info">
-        <h3>Coffee Cup Set</h3>
-        <div class="price">75 $ <span class="old-price">120 $</span></div>
-        <div class="card-actions">
-          <button onclick="event.stopPropagation();quickAddToCart(8)">Add to Cart</button>
-          <button class="mini" onclick="event.stopPropagation();toggleFavorite(8)"><i class="far fa-heart"></i></button>
-        </div>
-      </div>
-    </div><div class="product-card " data-testid="product-card-1785575846871" onclick="openProductModal(1785575846871)">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="تلفون ايفون" loading="lazy">
-        <div class="discount-badge">-20%</div>
-        
-      </div>
-      <div class="info">
-        <h3>تلفون ايفون</h3>
-        <div class="price">200 $ <span class="old-price">250 $</span></div>
-        <div class="card-actions">
-          <button onclick="event.stopPropagation();quickAddToCart(1785575846871)">Add to Cart</button>
-          <button class="mini" onclick="event.stopPropagation();toggleFavorite(1785575846871)"><i class="far fa-heart"></i></button>
-        </div>
-      </div>
-    </div></main>
+<main class="products" id="products-grid"><div class="empty" style="grid-column:1/-1"><i class="fas fa-box-open"></i><p>لا توجد منتجات مطابقة</p></div></main>
 
 <!-- Product modal -->
 <div class="modal-backdrop" id="product-modal">
   <div class="modal wide">
     <div class="modal-header">
-      <h2 id="modal-product-title" data-i18n="product_details">Product Details</h2>
+      <h2 id="modal-product-title" data-i18n="product_details">تفاصيل المنتج</h2>
       <button class="close-btn" onclick="closeProductModal()" data-testid="close-product-modal"><i class="fas fa-xmark"></i></button>
     </div>
     <div class="modal-body">
@@ -645,7 +519,7 @@ header{
         <button class="qty-btn" onclick="changeQty(1)">+</button>
       </div>
       <div class="action-row">
-        <button class="btn-primary" onclick="addCurrentToCart()" data-testid="add-to-cart-btn"><i class="fas fa-cart-plus"></i> <span data-i18n="add_to_cart">Add to Cart</span></button>
+        <button class="btn-primary" onclick="addCurrentToCart()" data-testid="add-to-cart-btn"><i class="fas fa-cart-plus"></i> <span data-i18n="add_to_cart">أضف للسلة</span></button>
         <button class="btn-outline" onclick="toggleFavCurrent()" id="fav-toggle-btn"><i class="far fa-heart"></i></button>
       </div>
     </div>
@@ -656,45 +530,40 @@ header{
 <div class="modal-backdrop cart-modal" id="cart-modal">
   <div class="modal">
     <div class="modal-header">
-      <h2><i class="fas fa-shopping-cart"></i> <span data-i18n="cart_title_h">Shopping Cart</span></h2>
+      <h2><i class="fas fa-shopping-cart"></i> <span data-i18n="cart_title_h">سلة الشراء</span></h2>
       <button class="close-btn" onclick="closeModal('cart-modal')"><i class="fas fa-xmark"></i></button>
     </div>
     <div class="modal-body">
-      <div id="cart-items-list"><div class="empty"><i class="fas fa-cart-arrow-down"></i><p>Your cart is empty</p></div></div>
-      <div id="cart-form" style="display: none;">
+      <div id="cart-items-list"><div class="empty"><i class="fas fa-cart-arrow-down"></i><p>سلة الشراء فارغة</p></div></div>
+      <div id="cart-form" style="display:none">
         <div class="form-group">
-          <label data-i18n="full_name">Full Name</label>
-          <input type="text" id="cust-name" data-testid="cust-name" placeholder="Enter your name" data-i18n-ph="name_ph">
+          <label data-i18n="full_name">الاسم الكامل</label>
+          <input type="text" id="cust-name" data-testid="cust-name" placeholder="اكتب اسمك" data-i18n-ph="name_ph">
         </div>
         <div class="form-group">
-          <label data-i18n="address">Address</label>
-          <input type="text" id="cust-address" data-testid="cust-address" placeholder="City, street, house no." data-i18n-ph="address_ph">
+          <label data-i18n="address">العنوان</label>
+          <input type="text" id="cust-address" data-testid="cust-address" placeholder="المدينة، الشارع، رقم المنزل" data-i18n-ph="address_ph">
         </div>
         <div class="form-group">
-          <label data-i18n="wa_lbl">Your WhatsApp number (optional)</label>
-          <input type="tel" id="cust-wa" data-testid="cust-wa" placeholder="e.g. 967777123456" data-i18n-ph="wa_ph">
+          <label data-i18n="wa_lbl">رقم واتساب العميل (اختياري)</label>
+          <input type="tel" id="cust-wa" data-testid="cust-wa" placeholder="مثال: 967777123456" data-i18n-ph="wa_ph">
         </div>
         <div class="form-group">
-          <label data-i18n="notes_lbl">Additional Notes</label>
-          <textarea id="cust-notes" data-testid="cust-notes" placeholder="Any extra order details..." data-i18n-ph="notes_ph"></textarea>
+          <label data-i18n="notes_lbl">ملاحظات إضافية</label>
+          <textarea id="cust-notes" data-testid="cust-notes" placeholder="أي تفاصيل إضافية للطلب..." data-i18n-ph="notes_ph"></textarea>
         </div>
         <div class="form-group" id="coupon-group">
-          <label><i class="fas fa-ticket"></i> <span data-i18n="coupon_lbl">Discount Code</span></label>
+          <label><i class="fas fa-ticket"></i> <span data-i18n="coupon_lbl">كود الخصم</span></label>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <input type="text" id="coupon-input" data-testid="coupon-input" placeholder="Enter discount code" data-i18n-ph="coupon_ph" style="flex:1;min-width:150px;text-transform:uppercase">
-            <button class="btn-primary" type="button" onclick="applyCouponCode()" data-testid="apply-coupon-btn" style="padding:10px 16px;font-size:14px"><i class="fas fa-check"></i> <span data-i18n="apply_coupon">Apply Code</span></button>
+            <input type="text" id="coupon-input" data-testid="coupon-input" placeholder="أدخل كود الخصم" data-i18n-ph="coupon_ph" style="flex:1;min-width:150px;text-transform:uppercase">
+            <button class="btn-primary" type="button" onclick="applyCouponCode()" data-testid="apply-coupon-btn" style="padding:10px 16px;font-size:14px"><i class="fas fa-check"></i> <span data-i18n="apply_coupon">تطبيق الكود</span></button>
           </div>
           <div id="coupon-msg" style="margin-top:6px;font-size:13px;font-weight:700"></div>
         </div>
-        <div class="totals" id="cart-totals">
-    <div class="totals-row"><span>Subtotal</span><span>230 $</span></div>
-    
-    
-    <div class="totals-row"><span>Shipping</span><span>25 $</span></div>
-    <div class="totals-row grand" data-testid="cart-grand-total"><span>Total</span><span>255 $</span></div></div>
+        <div class="totals" id="cart-totals"></div>
         <div class="action-row">
-          <button class="btn-primary" onclick="confirmOrder()" data-testid="confirm-order-btn"><i class="fas fa-check"></i> <span data-i18n="confirm_order">Confirm Order</span></button>
-          <button class="btn-outline" onclick="exportOrderExcel()"><i class="fas fa-file-excel"></i> <span data-i18n="export">Export</span></button>
+          <button class="btn-primary" onclick="confirmOrder()" data-testid="confirm-order-btn"><i class="fas fa-check"></i> <span data-i18n="confirm_order">تأكيد الطلب</span></button>
+          <button class="btn-outline" onclick="exportOrderExcel()"><i class="fas fa-file-excel"></i> <span data-i18n="export">تصدير</span></button>
         </div>
       </div>
     </div>
@@ -705,37 +574,10 @@ header{
 <div class="modal-backdrop" id="checkout-modal">
   <div class="modal">
     <div class="modal-header">
-      <h2><i class="fas fa-clipboard-check"></i> <span data-i18n="checkout_title">Complete Order</span></h2>
+      <h2><i class="fas fa-clipboard-check"></i> <span data-i18n="checkout_title">إكمال الطلب</span></h2>
       <button class="close-btn" onclick="closeModal('checkout-modal')" data-testid="close-checkout-modal"><i class="fas fa-xmark"></i></button>
     </div>
-    <div class="modal-body" id="checkout-body">
-    <div class="totals">
-      <div class="totals-row"><span>65W Fast Charger × 1</span><span>95 $</span></div><div class="totals-row"><span>LED Desk Lamp × 1</span><span>135 $</span></div>
-      <div class="totals-row"><span>Subtotal</span><span>230 $</span></div>
-      
-      
-      <div class="totals-row"><span>Shipping</span><span>25 $</span></div>
-      <div class="totals-row grand"><span>Total</span><span>255 $</span></div>
-    </div>
-    <h3 style="color:var(--gold);font-size:15px;margin:16px 0 8px"><i class="fas fa-hand-pointer"></i> Choose how to complete your order</h3>
-    
-    <div class="pay-option active" onclick="selectPayment('whatsapp')" data-testid="pay-whatsapp">
-      <div class="pay-head"><span><i class="fab fa-whatsapp" style="color:#25D366"></i> Complete order via WhatsApp</span><i class="fas fa-circle-check" style="color:var(--success)"></i></div>
-      <div class="pay-desc">WhatsApp will open with your order message ready to send.</div>
-    </div><div class="pay-option " onclick="selectPayment('method',1)" data-testid="pay-method-1">
-      <div class="pay-head"><span><i class="fas fa-building-columns"></i> تحويل بنكي</span></div>
-      
-    </div><div class="pay-option " onclick="selectPayment('method',2)" data-testid="pay-method-2">
-      <div class="pay-head"><span><i class="fas fa-wallet"></i> محفظة إلكترونية</span></div>
-      
-    </div><div class="pay-option " onclick="selectPayment('method',3)" data-testid="pay-method-3">
-      <div class="pay-head"><span><i class="fas fa-credit-card"></i> كريدت كارد</span></div>
-      
-    </div>
-    <div class="action-row" style="margin-top:16px">
-      <button class="btn-primary" onclick="finalizeOrder()" data-testid="finalize-order-btn"><i class="fas fa-check"></i> Confirm</button>
-      <button class="btn-outline" onclick="closeModal('checkout-modal');openCartModal()">Back to Cart</button>
-    </div></div>
+    <div class="modal-body" id="checkout-body"></div>
   </div>
 </div>
 
@@ -743,25 +585,25 @@ header{
 <div class="modal-backdrop" id="account-modal">
   <div class="modal">
     <div class="modal-header">
-      <h2><i class="fas fa-user"></i> <span data-i18n="account_h">My Account</span></h2>
+      <h2><i class="fas fa-user"></i> <span data-i18n="account_h">حسابي</span></h2>
       <button class="close-btn" onclick="closeModal('account-modal')"><i class="fas fa-xmark"></i></button>
     </div>
     <div class="modal-body">
       <div class="form-group">
-        <label data-i18n="name_lbl">Name</label>
-        <input type="text" id="acc-name" data-testid="acc-name" placeholder="Enter your name" data-i18n-ph="name_ph">
+        <label data-i18n="name_lbl">الاسم</label>
+        <input type="text" id="acc-name" data-testid="acc-name" placeholder="اكتب اسمك" data-i18n-ph="name_ph">
       </div>
       <div class="form-group">
-        <label data-i18n="address_opt">Address (optional)</label>
-        <input type="text" id="acc-address" placeholder="Your address" data-i18n-ph="address_ph2">
+        <label data-i18n="address_opt">العنوان (اختياري)</label>
+        <input type="text" id="acc-address" placeholder="عنوانك" data-i18n-ph="address_ph2">
       </div>
       <div class="form-group">
-        <label data-i18n="notes_opt">Notes (optional)</label>
-        <textarea id="acc-notes" placeholder="Saved notes" data-i18n-ph="notes_ph2"></textarea>
+        <label data-i18n="notes_opt">ملاحظات (اختياري)</label>
+        <textarea id="acc-notes" placeholder="ملاحظات دائمة" data-i18n-ph="notes_ph2"></textarea>
       </div>
       <div class="action-row">
-        <button class="btn-primary" onclick="saveAccount()" data-testid="save-account-btn"><i class="fas fa-save"></i> <span data-i18n="save">Save</span></button>
-        <button class="btn-outline" onclick="logoutAccount()" data-i18n="logout">Log out</button>
+        <button class="btn-primary" onclick="saveAccount()" data-testid="save-account-btn"><i class="fas fa-save"></i> <span data-i18n="save">حفظ</span></button>
+        <button class="btn-outline" onclick="logoutAccount()" data-i18n="logout">تسجيل خروج</button>
       </div>
     </div>
   </div>
@@ -771,10 +613,10 @@ header{
 <div class="modal-backdrop" id="favorites-modal">
   <div class="modal">
     <div class="modal-header">
-      <h2><i class="fas fa-heart"></i> <span data-i18n="fav_h">Wishlist</span></h2>
+      <h2><i class="fas fa-heart"></i> <span data-i18n="fav_h">المفضلة</span></h2>
       <button class="close-btn" onclick="closeModal('favorites-modal')"><i class="fas fa-xmark"></i></button>
     </div>
-    <div class="modal-body"><div id="fav-list"></div></div>
+    <div class="modal-body"><div id="fav-list"><div class="empty"><i class="far fa-heart"></i><p>لا توجد منتجات مفضلة</p></div></div></div>
   </div>
 </div>
 
@@ -785,14 +627,14 @@ header{
 <div class="modal-backdrop" id="welcome-modal">
   <div class="modal">
     <div class="modal-header">
-      <h2 data-i18n="welcome_title">Welcome to HmFast ⚡</h2>
+      <h2 data-i18n="welcome_title">أهلاً بك في HmFast ⚡</h2>
     </div>
     <div class="welcome-icon"><i class="fas fa-hand-sparkles"></i></div>
     <div class="modal-body">
-      <p data-i18n-html="welcome_body">For a better experience, add <span class="highlight">your name</span> from the account button above 👆<br>It helps you <span class="highlight">track your orders</span> and view your purchase history easily.</p>
+      <p data-i18n-html="welcome_body">لتجربة أفضل، يُفضّل إدخال <span class="highlight">اسمك</span> من زر الحساب في الأعلى 👆<br>سيساعدك ذلك على <span class="highlight">تتبع طلباتك</span> ومعرفة سجل مشترياتك بسهولة.</p>
       <div class="action-row">
-        <button class="btn-primary" onclick="welcomeGoAccount()" data-testid="welcome-register-btn"><i class="fas fa-user-plus"></i> <span data-i18n="welcome_reg">Add my name now</span></button>
-        <button class="btn-outline" onclick="closeWelcomeModal()" data-testid="welcome-later-btn" data-i18n="welcome_later">Later</button>
+        <button class="btn-primary" onclick="welcomeGoAccount()" data-testid="welcome-register-btn"><i class="fas fa-user-plus"></i> <span data-i18n="welcome_reg">تسجيل الاسم الآن</span></button>
+        <button class="btn-outline" onclick="closeWelcomeModal()" data-testid="welcome-later-btn" data-i18n="welcome_later">لاحقاً</button>
       </div>
     </div>
   </div>
@@ -808,9 +650,9 @@ header{
     <img id="lightbox-img" src="" alt="" draggable="false">
   </div>
   <div class="lightbox-controls">
-    <button class="lightbox-btn" onclick="lightboxZoom(0.25)" title="Zoom in" data-i18n-title="zoom_in"><i class="fas fa-plus"></i></button>
-    <button class="lightbox-btn" onclick="lightboxZoom(-0.25)" title="Zoom out" data-i18n-title="zoom_out"><i class="fas fa-minus"></i></button>
-    <button class="lightbox-btn" onclick="lightboxReset()" title="Reset" data-i18n-title="reset"><i class="fas fa-rotate-left"></i></button>
+    <button class="lightbox-btn" onclick="lightboxZoom(0.25)" title="تكبير" data-i18n-title="zoom_in"><i class="fas fa-plus"></i></button>
+    <button class="lightbox-btn" onclick="lightboxZoom(-0.25)" title="تصغير" data-i18n-title="zoom_out"><i class="fas fa-minus"></i></button>
+    <button class="lightbox-btn" onclick="lightboxReset()" title="إعادة تعيين" data-i18n-title="reset"><i class="fas fa-rotate-left"></i></button>
   </div>
 </div>
 
@@ -1936,12 +1778,12 @@ window.addEventListener('DOMContentLoaded', ()=>{
   }, 500);
 });
 </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2089a697c029602',t:'MTc4NDk1NTY0OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;}" crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2089a697c029602',t:'MTc4NDk1NTY0OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;}" crossorigin="anonymous"></script>
 
 
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;}" crossorigin="anonymous"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;}" crossorigin="anonymous"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;}" crossorigin="anonymous"></script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;}" crossorigin="anonymous"></script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;}" crossorigin="anonymous"></script>
-<script id="hmfast-seed">(function(){try{var d={"hmfast_products":"[{\"id\":1,\"name\":\"سماعات لاسلكية Pro\",\"category\":\"إلكترونيات\",\"price\":299,\"oldPrice\":450,\"desc\":\"سماعات بلوتوث بجودة صوت عالية، عزل ضوضاء نشط، بطارية تدوم 30 ساعة.\",\"images\":[\"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600\",\"https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600\",\"https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"stock\":15,\"color\":\"\"}],\"featured\":true},{\"id\":2,\"name\":\"ساعة ذكية رياضية\",\"category\":\"إلكترونيات\",\"price\":499,\"oldPrice\":699,\"desc\":\"ساعة ذكية بشاشة AMOLED، مراقبة معدل ضربات القلب، مقاومة للماء IP68.\",\"images\":[\"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600\",\"https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600\"],\"variants\":[{\"size\":\"42mm\",\"dim\":\"\",\"color\":\"\",\"stock\":8},{\"size\":\"46mm\",\"dim\":\"\",\"color\":\"\",\"stock\":0}],\"featured\":false},{\"id\":3,\"name\":\"حقيبة ظهر عصرية\",\"category\":\"إكسسوارات\",\"price\":180,\"desc\":\"حقيبة ظهر بتصميم أنيق، جيوب متعددة، مقاومة للماء ومناسبة للسفر والعمل.\",\"images\":[\"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600\",\"https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"stock\":20,\"color\":\"\"}]},{\"id\":4,\"name\":\"عطر رجالي فاخر 100ml\",\"category\":\"عطور\",\"price\":220,\"oldPrice\":320,\"desc\":\"عطر رجالي بنفحات شرقية دافئة، ثبات يصل إلى 12 ساعة.\",\"images\":[\"https://images.unsplash.com/photo-1541643600914-78b084683601?w=600\",\"https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"100ml\",\"stock\":5,\"color\":\"\"},{\"size\":\"\",\"dim\":\"50ml\",\"stock\":12,\"color\":\"\"}]},{\"id\":5,\"name\":\"مصباح مكتب LED\",\"category\":\"منزل\",\"price\":135,\"desc\":\"مصباح مكتب قابل للتعديل، 3 درجات إضاءة، شحن USB.\",\"images\":[\"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"stock\":9,\"color\":\"\"}]},{\"id\":6,\"name\":\"حذاء رياضي عصري\",\"category\":\"أزياء\",\"price\":349,\"oldPrice\":499,\"desc\":\"حذاء رياضي مريح، مقاس متعدد، مناسب للاستخدام اليومي والجري.\",\"images\":[\"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600\",\"https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600\"],\"variants\":[{\"size\":\"40\",\"dim\":\"\",\"stock\":3,\"color\":\"\"},{\"size\":\"42\",\"dim\":\"\",\"stock\":6,\"color\":\"\"},{\"size\":\"44\",\"dim\":\"\",\"stock\":0,\"color\":\"\"},{\"size\":\"46\",\"dim\":\"\",\"stock\":2,\"color\":\"\"}],\"featured\":true},{\"id\":7,\"name\":\"شاحن سريع 65W\",\"category\":\"إلكترونيات\",\"price\":95,\"desc\":\"شاحن سريع بمنفذين USB-C ومنفذ USB-A، متوافق مع جميع الأجهزة.\",\"images\":[\"https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"stock\":24,\"color\":\"\"}]},{\"id\":8,\"name\":\"طقم فناجين قهوة\",\"category\":\"منزل\",\"price\":75,\"oldPrice\":120,\"desc\":\"طقم فناجين سيراميك أنيق، 6 قطع، مناسب للضيافة.\",\"images\":[\"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600\"],\"variants\":[{\"size\":\"L\",\"dim\":\"50ml\",\"color\":\"أخضر\",\"stock\":1}],\"featured\":false},{\"id\":1785575846871,\"name\":\"تلفون ايفون\",\"category\":\"إلكترونيات\",\"price\":200,\"oldPrice\":250,\"desc\":\"خارق بارق\",\"images\":[\"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"أزرق\",\"stock\":1}],\"featured\":false}]","hmfast_settings":"{\"storeName\":\"HmFast\",\"currency\":\"$\",\"shipping\":25,\"freeShippingThreshold\":500,\"whatsapp\":\"967774357019\",\"vat\":0,\"footer\":\"HmFast © جميع الحقوق محفوظة\",\"currencies\":[{\"code\":\"USD\",\"name\":\"دولار\",\"symbol\":\"$\",\"rate\":1},{\"code\":\"YER\",\"name\":\"ريال يمني\",\"symbol\":\"﷼\",\"rate\":250},{\"code\":\"SAR\",\"name\":\"ريال سعودي\",\"symbol\":\"ر.س\",\"rate\":3.75}],\"baseCurrency\":\"USD\",\"activeCurrency\":\"USD\",\"paymentMethods\":[{\"id\":1,\"name\":\"تحويل بنكي\",\"icon\":\"building-columns\",\"details\":\"\",\"active\":false},{\"id\":2,\"name\":\"محفظة إلكترونية\",\"icon\":\"wallet\",\"details\":\"\",\"active\":false},{\"id\":3,\"name\":\"كريدت كارد\",\"icon\":\"credit-card\",\"details\":\"\",\"active\":false}],\"invoiceTemplate\":\"🛒 ━━━━━━━━━━━━━━━\\n     فاتورة {storeName}\\n━━━━━━━━━━━━━━━━━\\n🧾 رقم الطلب: {orderId}\\n📅 التاريخ: {date}\\n\\n👤 العميل: {customerName}\\n📱 واتساب: {customerWa}\\n📍 العنوان: {address}\\n\\n━━━ 🛍️ المنتجات ━━━\\n{items}\\n━━━━━━━━━━━━━━━━━\\nالمجموع الفرعي: {subtotal}\\n🎟️ الخصم: {discount}\\n🧮 الضريبة: {vat}\\n🚚 الشحن: {shipping}\\n💰 الإجمالي: {total}\\n\\n💳 طريقة الدفع: {paymentMethod}\\n📝 ملاحظات: {notes}\\n\\n{footer}\",\"invoiceToggles\":{\"storeName\":true,\"orderId\":true,\"date\":true,\"customerName\":true,\"address\":true,\"customerWa\":true,\"items\":true,\"subtotal\":true,\"discount\":true,\"vat\":true,\"shipping\":true,\"total\":true,\"paymentMethod\":true,\"notes\":true,\"footer\":true}}"};for(var k in d){localStorage.setItem(k,d[k]);}}catch(e){}})();</script></body></html>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a27aae3c1e5c356a',t:'MTc4NjE1MTgzOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;}" crossorigin="anonymous"></script>
+<script id="hmfast-seed">(function(){try{var d={"hmfast_products":"[{\"id\":1,\"name\":\"سماعات لاسلكية Pro\",\"category\":\"إلكترونيات\",\"price\":299,\"oldPrice\":450,\"desc\":\"سماعات بلوتوث بجودة صوت عالية، عزل ضوضاء نشط، بطارية تدوم 30 ساعة.\",\"images\":[\"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600\",\"https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600\",\"https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":9}]},{\"id\":2,\"name\":\"ساعة ذكية رياضية\",\"category\":\"إلكترونيات\",\"price\":499,\"oldPrice\":699,\"desc\":\"ساعة ذكية بشاشة AMOLED، مراقبة معدل ضربات القلب، مقاومة للماء IP68.\",\"images\":[\"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600\",\"https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":9}]},{\"id\":3,\"name\":\"حقيبة ظهر عصرية\",\"category\":\"إكسسوارات\",\"price\":180,\"desc\":\"حقيبة ظهر بتصميم أنيق، جيوب متعددة، مقاومة للماء ومناسبة للسفر والعمل.\",\"images\":[\"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600\",\"https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]},{\"id\":4,\"name\":\"عطر رجالي فاخر 100ml\",\"category\":\"عطور\",\"price\":220,\"oldPrice\":320,\"desc\":\"عطر رجالي بنفحات شرقية دافئة، ثبات يصل إلى 12 ساعة.\",\"images\":[\"https://images.unsplash.com/photo-1541643600914-78b084683601?w=600\",\"https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]},{\"id\":5,\"name\":\"مصباح مكتب LED\",\"category\":\"منزل\",\"price\":135,\"desc\":\"مصباح مكتب قابل للتعديل، 3 درجات إضاءة، شحن USB.\",\"images\":[\"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]},{\"id\":6,\"name\":\"حذاء رياضي عصري\",\"category\":\"أزياء\",\"price\":349,\"oldPrice\":499,\"desc\":\"حذاء رياضي مريح، مقاس متعدد، مناسب للاستخدام اليومي والجري.\",\"images\":[\"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600\",\"https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]},{\"id\":7,\"name\":\"شاحن سريع 65W\",\"category\":\"إلكترونيات\",\"price\":95,\"desc\":\"شاحن سريع بمنفذين USB-C ومنفذ USB-A، متوافق مع جميع الأجهزة.\",\"images\":[\"https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]},{\"id\":8,\"name\":\"طقم فناجين قهوة\",\"category\":\"منزل\",\"price\":75,\"oldPrice\":120,\"desc\":\"طقم فناجين سيراميك أنيق، 6 قطع، مناسب للضيافة.\",\"images\":[\"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":0}],\"featured\":false},{\"id\":1784956992890,\"name\":\"Hdh\",\"category\":\"إلكترونيات\",\"price\":55,\"oldPrice\":69,\"desc\":\"ميزة تتبع الطلب للمشتري\",\"images\":[\"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600\",\"https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600\",\"https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600\"],\"variants\":[{\"size\":\"\",\"dim\":\"\",\"color\":\"\",\"stock\":10}]}]","hmfast_settings":"{\"storeName\":\"HmFast\",\"currency\":\"$\",\"shipping\":25,\"freeShippingThreshold\":500,\"whatsapp\":\"967774357019\",\"vat\":5,\"footer\":\"HmFast © جميع الحقوق محفوظة\"}"};for(var k in d){localStorage.setItem(k,d[k]);}}catch(e){}})();</script></body></html>
