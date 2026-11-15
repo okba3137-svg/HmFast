@@ -10,17 +10,11 @@
   "lang": "ar",
   "background_color": "#12151C",
   "theme_color": "#12151C",
-  "categories": [
-    "shopping",
-    "lifestyle"
-  ],
   "icons": [
-    
-    {
+        {
       "src": "/icon.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     }
   ]
 }
